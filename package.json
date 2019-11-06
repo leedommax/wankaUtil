@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "wanka-utils",
   "version": "1.0.0",
   "description": "wanka-utils",
   "main": "dist/dist.js",
