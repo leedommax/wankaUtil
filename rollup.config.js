@@ -46,7 +46,8 @@ export default {
     file: resolveFile(destFilePath),
     format: 'umd', // 模块类型
     name: 'wankaUtil',
-    sourceMap: isProd
+    sourceMap: isProd,
+    exports: 'named'
   },
   external: [],// 无需打包的第三方包
   plugins: plugins
