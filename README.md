@@ -34,3 +34,10 @@ export default {
 #### 4.配置开发环境
 
 4.1 rollup-plugin-serve
+```
+    serve({
+      port: 3001,
+      // 设置 exmaple的访问目录和dist的访问目录
+      contentBase: [resolveFile('examples'), resolveFile('dist')]
+    })
+```
