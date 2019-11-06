@@ -5,13 +5,12 @@
 }(this, (function (exports) { 'use strict';
 
   // 判断当前是否是安卓手机
-  const is_android = ua => {
+  var is_android = function (ua) {
     ua = navigator.userAgent.toLocaleLowerCase() || ua;
-
     if (ua.indexOf('android') > -1 || ua.indexOf('linux') > -1) {
-      return true;
+      return true
     } else {
-      return false;
+      return false
     }
   };
 

@@ -3,7 +3,7 @@
 1.2 插件rollup-plugin-node-resolve 支持引入第三方包   
 1.3 插件rollup-plugin-commonjs 支持commonjs模块   
 1.4 插件rollup-plugin-node-builtins 支持node内置模块   
-1.5 插件rollup-plugin-babel 支持es6语法  增加babel配置文件
+1.5 插件rollup-plugin-buble 支持es6语法  增加babel配置文件
 1.6 插件rollup-plugin-eslint 代码审查 增加eslint配置文件     
 1.7 插件rollup-plugin-uglify 生产环境压缩代码 
 1.8 rollup配置文件
@@ -40,4 +40,21 @@ export default {
       // 设置 exmaple的访问目录和dist的访问目录
       contentBase: [resolveFile('examples'), resolveFile('dist')]
     })
+```
+#### 5.配置单元测试jest
+5.1 jest 支持babel yarn add --dev babel-jest @babel/core @babel/preset-env
+```\
+// babel.config.js
+module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          node: 'current',
+        },
+      },
+    ],
+  ],
+};
 ```

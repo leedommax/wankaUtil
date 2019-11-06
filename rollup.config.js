@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel'// 转化es6
+// import babel from 'rollup-plugin-babel'// 转化es6
 import commonjs from 'rollup-plugin-commonjs'// 支持commonjs包
 import resolve from 'rollup-plugin-node-resolve' // 支持第三方包
 import builtins from 'rollup-plugin-node-builtins' // 支持node内置模块
@@ -6,6 +6,8 @@ import json from 'rollup-plugin-json';
 import { uglify } from "rollup-plugin-uglify"// 压缩代码
 import { eslint } from 'rollup-plugin-eslint'// 代码审查
 import serve from'rollup-plugin-serve'
+import buble from 'rollup-plugin-buble'
+
 import path from 'path'
 import pkg from './package.json'
 const resolveFile = function(filePath) {
@@ -14,10 +16,7 @@ const resolveFile = function(filePath) {
 let isProd = process.env.NODE_ENV === 'production'
 // 通用的插件
 const basePlugins = [
-    babel({
-      exclude: [/\/core-js\//, 'node_modules/**'], // 只编译我们的源代码
-      runtimeHelpers: true
-    }),
+		buble(),
     builtins(),
     resolve(),
     commonjs(),
