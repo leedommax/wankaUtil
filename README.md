@@ -1,4 +1,4 @@
-####1.配置rollup
+#### 1.配置rollup
 1.1 插件rollup-plugin-json，支持引入json   
 1.2 插件rollup-plugin-node-resolve 支持引入第三方包   
 1.3 插件rollup-plugin-commonjs 支持commonjs模块   
@@ -21,14 +21,16 @@ export default {
 }
 ```
 
-####2.命令
+#### 2.命令
 ```
     "dev": "rollup -w -c --environment NODE_ENV:development", //监听热更新
     "test": "rollup  -c --environment NODE_ENV:development",  // 打包不压缩
     "build": "rollup -c --environment NODE_ENV:production" // 打包压缩
 ```
-####3.文件目录
+#### 3.文件目录
 3.1 src 源文件。src/main入口文件  src/packages 各个模块功能   
 3.2 examples 开发例子   
 3.3 dist 输出文件
+#### 4.配置开发环境
 
+4.1 rollup-plugin-serve

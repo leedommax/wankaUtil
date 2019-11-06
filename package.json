@@ -2,10 +2,10 @@
   "name": "wanka-utils",
   "version": "1.0.0",
   "description": "wanka-utils",
-  "main": "dist/dist.js",
+  "main": "dist/wanka-utils.js",
   "scripts": {
     "dev": "rollup -w -c --environment NODE_ENV:development",
-    "test": "rollup  -c --environment NODE_ENV:development",
+    "test": "rollup  -c --environment NODE_ENV:test",
     "build": "rollup -c --environment NODE_ENV:production"
   },
   "author": "lidongdong@9fbank.cc",
@@ -33,6 +33,7 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-uglify": "^6.0.3"
-    }
+  }
 }
